@@ -1,15 +1,14 @@
-import { Articles } from "@data/articles";
 import Styles from "@styles/ArticleList.module.css";
 
-export default function ArticleList() {
+export default function ArticleList({ articles }) {
   return (
     <section className={Styles.articleList}>
-      {Articles.map((article) => (
+      {articles.map((article) => (
         <a
           href={article.url}
           rel="nofollow noopener"
           className={Styles.articleList__card}
-          key={article.id}
+          key={article.sys.id}
           target="_blank"
         >
           <h3 className={Styles.article__title}>{article.title}</h3>

@@ -3,8 +3,9 @@ import Head from "next/head";
 import Mission from "@components/Mission";
 import ContentWrapper from "@components/ContentWrapper";
 import ArticleList from "@components/ArticleList";
+import ContentfulArticles from "@lib/contentful/Articles";
 
-export default function Home() {
+export default function Home({ articles }) {
   return (
     <>
       <MainLayout>
@@ -20,9 +21,19 @@ export default function Home() {
 
         <ContentWrapper>
           <Mission />
-          <ArticleList />
+          <ArticleList articles={articles} />
         </ContentWrapper>
       </MainLayout>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const articles = await ContentfulArticles.getAll();
+
+  return {
+    props: {
+      articles,
+    },
+  };
 }
