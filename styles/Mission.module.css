@@ -1,0 +1,10 @@
+.mission__text {
+  font-family: var(--font-family-main);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: var(--font-weight-normal);
+  color: var(--black);
+  margin: 1rem auto;
+  text-align: center;
+  max-width: var(--readable-text-width);
+}
