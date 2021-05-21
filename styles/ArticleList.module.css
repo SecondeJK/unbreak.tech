@@ -24,6 +24,13 @@
   justify-content: space-between;
 }
 
+.articleList__card:focus,
+.articleList__card:hover {
+  outline-width: 0;
+  box-shadow: var(--gray) 0 0 0 0.25rem;
+  transition: box-shadow 0.2s ease 0s;
+}
+
 .article__title {
   color: var(--black);
   text-transform: uppercase;

@@ -4,7 +4,20 @@
   line-height: 1.6;
   font-weight: var(--font-weight-normal);
   color: var(--black);
-  margin: 1rem auto;
-  text-align: center;
+  margin: 2rem auto;
+  text-align: left;
   max-width: var(--readable-text-width);
+}
+
+.mission__link {
+  color: inherit;
+  text-decoration-thickness: 0.125rem;
+  text-underline-offset: 0.125rem;
+}
+
+.mission__link:focus,
+.mission__link:hover {
+  outline-width: 0;
+  box-shadow: var(--gray) 0 0 0 0.25rem;
+  transition: box-shadow 0.2s ease 0s;
 }

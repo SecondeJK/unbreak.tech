@@ -6,6 +6,7 @@ export default css.global`
   :root {
     --black: #0f111a;
     --white: #ffffff;
+    --gray: #778ca3;
 
     --font-weight-normal: 400;
     --font-weight-bold: 700;
