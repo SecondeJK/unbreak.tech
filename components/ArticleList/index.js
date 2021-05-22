@@ -1,4 +1,5 @@
 import Styles from "@styles/ArticleList.module.css";
+import ExternalLinkSvg from "./ExternalLinkSvg";
 
 export default function ArticleList({ articles }) {
   return (
@@ -12,7 +13,10 @@ export default function ArticleList({ articles }) {
           target="_blank"
         >
           <h3 className={Styles.article__title}>{article.title}</h3>
-          <p className={Styles.article__author}>{article.author}</p>
+          <div className={Styles.article__footer}>
+            <p className={Styles.article__author}>{article.author}</p>
+            <ExternalLinkSvg />
+          </div>
         </a>
       ))}
     </section>

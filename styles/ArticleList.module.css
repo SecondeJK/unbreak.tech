@@ -46,3 +46,11 @@
   line-height: 1.4;
   font-family: var(--font-family-main);
 }
+
+.article__footer {
+  color: var(--gray);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
