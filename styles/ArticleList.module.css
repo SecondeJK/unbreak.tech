@@ -1,3 +1,14 @@
+.sectionHeading {
+  font-family: var(--font-family-heading);
+  text-transform: uppercase;
+  text-align: center;
+  margin: 4rem auto 1rem auto;
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  max-width: 30ch;
+}
+
 .articleList {
   padding: 1rem;
   margin-top: 2rem;
@@ -45,6 +56,15 @@
   font-size: 1.2rem;
   line-height: 1.4;
   font-family: var(--font-family-main);
+}
+
+.article__excerpt {
+  color: var(--black);
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-style: italic;
+  font-family: var(--font-family-main);
+  margin-bottom: 2rem;
 }
 
 .article__footer {
