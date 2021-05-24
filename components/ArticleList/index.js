@@ -1,6 +1,8 @@
 import Styles from "@styles/ArticleList.module.css";
 import ExternalLinkSvg from "./ExternalLinkSvg";
 
+import { formatPublishedDateForDateTime, formatPublishedDateForDisplay } from "@utils/Date";
+
 export default function ArticleList({ articles }) {
   return (
     <section>
@@ -17,8 +19,17 @@ export default function ArticleList({ articles }) {
             key={article.sys.id}
             target="_blank"
           >
-            <h3 className={Styles.article__title}>{article.title}</h3>
+            <div>
+              <time
+                className={Styles.article__publishedDate}
+                dateTime={formatPublishedDateForDateTime(article.publishedDate)}
+              >
+                {formatPublishedDateForDisplay(article.publishedDate)}
+              </time>
+              <h3 className={Styles.article__title}>{article.title}</h3>
+            </div>
             <p className={Styles.article__excerpt}>{article.excerpt}</p>
+
             <div className={Styles.article__footer}>
               <p className={Styles.article__author}>{article.author}</p>
               <ExternalLinkSvg />

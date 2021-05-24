@@ -42,6 +42,12 @@
   transition: box-shadow 0.2s ease 0s;
 }
 
+.article__publishedDate {
+  margin-bottom: 1rem;
+  display: block;
+  color: var(--black);
+}
+
 .article__title {
   color: var(--black);
   text-transform: uppercase;
