@@ -41,7 +41,7 @@
   filter: grayscale(100%);
 }
 
-.articleList__cardImageContainer img:hover {
+.articleList__card:hover img {
   filter: unset;
   transition: filter var(--transition-time) ease-in-out;
 }
