@@ -1,21 +1,23 @@
 import css from "styled-jsx/css";
 
 export default css.global`
-  @import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Roboto:wght@400&display=swap");
-
   :root {
-    --black: #0f111a;
+    // --black: #0f111a;
+    --black: #000000;
     --white: #ffffff;
-    --gray: #778ca3;
+    --gray: #c9cacc;
+    --red: #ff4e56;
 
     --font-weight-normal: 400;
     --font-weight-bold: 700;
 
-    --font-family-heading: "Syncopate", sans-serif;
-    --font-family-main: "Roboto", sans-serif;
+    --font-family-heading: "Fira sans", sans-serif;
+    --font-family-main: "Fira sans", sans-serif;
 
-    --wrapper-max-width: 1080px;
+    --wrapper-max-width: 1440px;
     --readable-text-width: 48rem;
+
+    --box-shadow-default: rgba(0, 0, 0, 0.1) 0 0.125rem 0.25rem;
   }
 
   html {

@@ -1,45 +1,60 @@
 .sectionHeading {
   font-family: var(--font-family-heading);
   text-transform: uppercase;
-  text-align: center;
-  margin: 4rem auto 1rem auto;
+  text-align: left;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   display: block;
-  font-size: 1.6rem;
+  font-size: clamp(1.8rem, 3vw, 3rem);
   line-height: 1.2;
   max-width: 30ch;
+  padding-bottom: 1rem;
+  border-bottom: 0.25rem solid var(--red);
 }
 
 .articleList {
-  padding: 1rem;
+  --transition-time: 0.2s;
   margin-top: 2rem;
   margin-bottom: 2rem;
   display: block;
 }
 
-@media screen and (min-width: 600px) {
-  .articleList {
-    display: grid;
-    column-gap: 1rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 .articleList__card {
-  padding: 1rem;
-  border-radius: 1rem 0 1rem 0;
-  border: 0.125rem solid var(--black);
+  border-radius: 0 0 1rem 1rem;
+  border: 0.05rem solid var(--gray);
   text-decoration: none;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  box-shadow: var(--box-shadow-default);
+}
+
+.articleList__cardImageContainer {
+  overflow: hidden;
+  height: 16rem;
+  display: grid;
+  align-items: center;
+}
+
+.articleList__cardImageContainer img {
+  filter: grayscale(100%);
+}
+
+.articleList__cardImageContainer img:hover {
+  filter: unset;
+  transition: filter var(--transition-time) ease-in-out;
+}
+
+.articleList__cardInner {
+  padding: 1rem;
 }
 
 .articleList__card:focus,
 .articleList__card:hover {
   outline-width: 0;
-  box-shadow: var(--gray) 0 0 0 0.25rem;
-  transition: box-shadow 0.2s ease 0s;
+  box-shadow: var(--red) 0 0 0 0.25rem;
+  transition: box-shadow var(--transition-time) ease 0s;
 }
 
 .article__publishedDate {
@@ -79,4 +94,24 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (min-width: 1080px) {
+  .articleList {
+    display: grid;
+    grid-gap: 2rem 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .articleList__card {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .articleList {
+    display: grid;
+    grid-gap: 2rem 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
