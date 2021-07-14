@@ -17,6 +17,8 @@ export default function Home({ articles }) {
             content="UNBREAK.TECH — a platform for MEN to educate other MEN about the need for change and equality in tech."
           />
 
+          <meta name="monetization" content="$ilp.uphold.com/J7y7wkRezRYL" />
+
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <link
             href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap"
