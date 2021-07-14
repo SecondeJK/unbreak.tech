@@ -1,27 +1,30 @@
 import Link from "next/link";
 import Styles from "@styles/Header.module.css";
+import LogoU from "@components/LogoU";
 
 export default function Header() {
   return (
     <header className={Styles.header__container}>
       <div className={Styles.header__inner}>
-        <Link href="/">
-          <a className={Styles.header__title}>unbreak.tech</a>
-        </Link>
-        {/* <nav className={Styles.nav__container}>
+        <nav className={Styles.nav__container}>
           <ul className={Styles.nav__list}>
+            <li className={Styles.nav__listItem}>
+              <LogoU />
+            </li>
             <li className={Styles.nav__listItem}>
               <Link href="/">
                 <a className={Styles.nav__listItemLink}>Home</a>
               </Link>
             </li>
-            <li className={Styles.nav__listItem}>
-              <Link href="/contribute">
-                <a className={Styles.nav__listItemLink}>Contribute</a>
-              </Link>
+            <li
+              className={`${Styles.nav__listItem} ${Styles.nav__listItemLink} ${Styles.nav__listItemLink__soon}`}>
+              Submit your article - coming soon
+              {/* <Link href="/contribute">
+                <a className={Styles.nav__listItemLink}></a>
+              </Link> */}
             </li>
           </ul>
-        </nav> */}
+        </nav>
       </div>
     </header>
   );

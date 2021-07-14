@@ -1,12 +1,18 @@
 .mission__text {
   font-family: var(--font-family-main);
-  font-size: 1.2rem;
+  font-size: clamp(1.4rem, 2vw, 2rem);
   line-height: 1.6;
   font-weight: var(--font-weight-normal);
   color: var(--black);
-  margin: 2rem auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: clamp(4rem, 6vw, 6rem);
+  margin-top: clamp(4rem, 6vw, 6rem);
   text-align: left;
-  max-width: var(--readable-text-width);
+}
+
+.mission__text__bold {
+  font-weight: var(--font-weight-bold);
 }
 
 .mission__link {
@@ -18,6 +24,6 @@
 .mission__link:focus,
 .mission__link:hover {
   outline-width: 0;
-  box-shadow: var(--gray) 0 0 0 0.25rem;
+  box-shadow: var(--red) 0 0 0 0.25rem;
   transition: box-shadow 0.2s ease 0s;
 }

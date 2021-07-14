@@ -1,6 +1,5 @@
 .header__container {
-  margin-bottom: 2rem;
-  background-color: var(--black);
+  background-color: var(--white);
 }
 
 .header__inner {
@@ -8,10 +7,10 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding: 1rem;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .header__title {
@@ -20,7 +19,7 @@
   font-size: clamp(1.5rem, 3vw, 3rem);
   margin-bottom: 1rem;
   margin-top: 1rem;
-  color: var(--white);
+  color: var(--black);
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.5rem;
@@ -33,16 +32,19 @@
 }
 
 .nav__container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nav__list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 1rem 0;
 }
 
 .nav__listItem {
@@ -50,7 +52,7 @@
 }
 
 .nav__listItemLink {
-  color: var(--white);
+  color: var(--black);
   text-transform: uppercase;
   text-decoration: none;
   font-family: var(--font-family-heading);
@@ -65,6 +67,30 @@
 
 .nav__listItemLink:focus {
   outline-width: 0;
-  box-shadow: var(--gray) 0 0 0 0.25rem;
+  box-shadow: var(--red) 0 0 0 0.25rem;
   transition: box-shadow 0.2s ease 0s;
+}
+
+.nav__listItemLink__soon {
+  color: var(--red);
+}
+
+@media screen and (min-width: 768px) {
+  .header__container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-bottom: 0.125rem solid var(--black);
+    box-shadow: var(--box-shadow-default);
+  }
+
+  .nav__list {
+    flex-direction: row;
+    margin: 0;
+  }
+
+  .nav__container {
+    margin: unset;
+  }
 }
