@@ -1,6 +1,5 @@
 import Styles from "@styles/ArticleList.module.css";
 import ExternalLinkSvg from "./ExternalLinkSvg";
-import Image from "next/image";
 import { formatPublishedDateForDateTime, formatPublishedDateForDisplay } from "@utils/Date";
 
 export default function ArticleList({ articles }) {
@@ -20,23 +19,24 @@ export default function ArticleList({ articles }) {
             target="_blank">
             {article.image && (
               <div className={Styles.articleList__cardImageContainer}>
-                <Image
-                  src={article.image.url}
+                <img
+                  src={`${article.image.url}?w=500`}
                   height={article.image.height}
                   width={article.image.width}
                   alt={article.image.description}
-                  layout="responsive"
                 />
               </div>
             )}
             <div className={Styles.articleList__cardInner}>
-              <time
-                className={Styles.article__publishedDate}
-                dateTime={formatPublishedDateForDateTime(article.publishedDate)}>
-                {formatPublishedDateForDisplay(article.publishedDate)}
-              </time>
-              <h2 className={Styles.article__title}>{article.title}</h2>
-              <p className={Styles.article__excerpt}>{article.excerpt}</p>
+              <div>
+                <time
+                  className={Styles.article__publishedDate}
+                  dateTime={formatPublishedDateForDateTime(article.publishedDate)}>
+                  {formatPublishedDateForDisplay(article.publishedDate)}
+                </time>
+                <h2 className={Styles.article__title}>{article.title}</h2>
+                <p className={Styles.article__excerpt}>{article.excerpt}</p>
+              </div>
 
               <div className={Styles.article__footer}>
                 <p className={Styles.article__author}>{article.author}</p>

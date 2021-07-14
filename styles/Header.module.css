@@ -1,10 +1,5 @@
 .header__container {
-  position: fixed;
-  left: 0;
-  right: 0;
   background-color: var(--white);
-  z-index: 1;
-  box-shadow: var(--box-shadow-default);
 }
 
 .header__inner {
@@ -52,17 +47,6 @@
   margin: 0 0 1rem 0;
 }
 
-@media screen and (min-width: 768px) {
-  .nav__list {
-    flex-direction: row;
-    margin: 0;
-  }
-
-  .nav__container {
-    margin: unset;
-  }
-}
-
 .nav__listItem {
   padding: 0.5rem;
 }
@@ -89,4 +73,22 @@
 
 .nav__listItemLink__soon {
   color: var(--red);
+}
+
+@media screen and (min-width: 768px) {
+  .header__container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    box-shadow: var(--box-shadow-default);
+  }
+  .nav__list {
+    flex-direction: row;
+    margin: 0;
+  }
+
+  .nav__container {
+    margin: unset;
+  }
 }
