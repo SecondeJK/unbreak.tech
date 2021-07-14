@@ -35,6 +35,7 @@
   height: 20rem;
   display: grid;
   align-items: center;
+  background-color: var(--white);
 }
 
 .articleList__cardImageContainer img {
@@ -67,12 +68,15 @@
   margin-bottom: 1rem;
   display: block;
   color: var(--black);
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 2rem;
 }
 
 .article__title {
   color: var(--black);
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.4;
   font-family: var(--font-family-heading);
   margin-bottom: 2rem;
@@ -95,7 +99,7 @@
 }
 
 .article__footer {
-  color: var(--gray);
+  color: var(--red);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
