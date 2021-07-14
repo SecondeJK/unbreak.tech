@@ -28,7 +28,7 @@ export default function Home({ articles }) {
         <LogoBanner />
 
         <ContentWrapper>
-          {/* <Mission /> */}
+          <Mission />
           <ArticleList articles={articles} />
         </ContentWrapper>
       </MainLayout>

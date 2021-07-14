@@ -5,9 +5,9 @@ import { formatPublishedDateForDateTime, formatPublishedDateForDisplay } from "@
 export default function ArticleList({ articles }) {
   return (
     <section>
-      <h1 className={Styles.sectionHeading}>
+      <h2 className={Styles.sectionHeading}>
         Read {articles.length} articles by men on equality in the tech industry
-      </h1>
+      </h2>
       <div className={Styles.articleList}>
         {articles.map((article) => (
           <a
