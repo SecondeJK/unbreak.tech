@@ -21,7 +21,7 @@
 
 .articleList__card {
   border-radius: 0 0 1rem 1rem;
-  border: 0.05rem solid var(--gray);
+  border: 0.125rem solid var(--black);
   text-decoration: none;
   margin-bottom: 2rem;
   display: flex;
