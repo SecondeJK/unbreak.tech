@@ -78,3 +78,7 @@
   padding: 1rem;
   margin-bottom: 1rem;
 }
+
+.submitForm__honeypot {
+  display: none;
+}
