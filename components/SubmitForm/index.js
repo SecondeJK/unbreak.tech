@@ -22,6 +22,7 @@ export default function SubmitForm() {
       }}>
       {({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
         <form
+          name="Submit unbreak.tech article"
           method="POST"
           data-netlify="true"
           action="/submit/success"
