@@ -5,7 +5,7 @@ import ContentWrapper from "@components/ContentWrapper";
 
 //TODO - add this to noindex
 
-export default function Submit() {
+export default function Success() {
   return (
     <>
       <MainLayout>
