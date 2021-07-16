@@ -6,6 +6,7 @@ export default css.global`
     --black: #000000;
     --white: #ffffff;
     --gray: #c9cacc;
+    --gray-dark: #595959;
     --red: #ff4e56;
 
     --font-weight-normal: 400;
@@ -16,6 +17,7 @@ export default css.global`
 
     --wrapper-max-width: 1440px;
     --readable-text-width: 48rem;
+    --form-max-width: 48rem;
 
     --box-shadow-default: rgba(0, 0, 0, 0.1) 0 0.125rem 0.25rem;
   }
