@@ -1,6 +1,31 @@
+.container {
+  margin: 6rem auto 3rem auto;
+  max-width: var(--form-max-width);
+}
+
+.header {
+  font-family: var(--font-family-main);
+  font-size: 2rem;
+  line-height: 1.6;
+  font-weight: var(--font-weight-bold);
+  color: var(--black);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.disclaimer {
+  font-family: var(--font-family-main);
+  font-size: 1.4rem;
+  line-height: 1.4;
+  font-weight: var(--font-weight-normal);
+  color: var(--black);
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
 .submitForm {
   max-width: var(--form-max-width);
-  margin: 6rem auto;
+  margin: 3rem auto 6rem auto;
 }
 
 .submitForm__row {
@@ -57,6 +82,7 @@
   font-size: 1.4rem;
   letter-spacing: 1px;
   cursor: pointer;
+  margin-top: 2rem;
 }
 
 .submitForm__button:focus,

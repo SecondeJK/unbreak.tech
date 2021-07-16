@@ -1,6 +1,6 @@
 import MainLayout from "@layouts/main";
 import Head from "next/head";
-import SubmitForm from "@components/SubmitForm";
+import SubmitFormSuccess from "@components/SubmitFormSuccess";
 import ContentWrapper from "@components/ContentWrapper";
 
 //TODO - add this to noindex
@@ -35,7 +35,9 @@ export default function Success() {
           <meta name="theme-color" content="#000000" />
         </Head>
 
-        <ContentWrapper>SUBMIT SUCCESS</ContentWrapper>
+        <ContentWrapper>
+          <SubmitFormSuccess />
+        </ContentWrapper>
       </MainLayout>
     </>
   );
