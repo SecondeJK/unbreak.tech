@@ -18,10 +18,9 @@ export default function Header() {
             </li>
             <li
               className={`${Styles.nav__listItem} ${Styles.nav__listItemLink} ${Styles.nav__listItemLink__soon}`}>
-              Submit your article - coming soon
-              {/* <Link href="/contribute">
-                <a className={Styles.nav__listItemLink}></a>
-              </Link> */}
+              <Link href="/submit">
+                <a className={Styles.nav__listItemLink}>Submit your article</a>
+              </Link>
             </li>
           </ul>
         </nav>
