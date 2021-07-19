@@ -1,5 +1,5 @@
 .container {
-  margin: 2rem auto 3rem auto;
+  margin: 2rem auto 4rem auto;
   max-width: var(--form-max-width);
 }
 
@@ -27,10 +27,6 @@
   color: var(--black);
   text-align: left;
   margin-bottom: 2rem;
-}
-
-.disclaimer:last-of-type {
-  margin-bottom: 4rem;
 }
 
 .submitForm {
@@ -95,6 +91,12 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
   text-decoration: none;
+  display: inline-block;
+  width: unset;
+}
+
+.submitForm__button__full {
+  width: 100%;
 }
 
 .submitForm__button[disabled] {

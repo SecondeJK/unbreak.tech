@@ -1,9 +1,12 @@
 import MainLayout from "@layouts/main";
 import SubmitFormSuccess from "@components/SubmitFormSuccess";
 import ContentWrapper from "@components/ContentWrapper";
+import ArticleList from "@components/ArticleList";
+import ContentfulArticles from "@lib/contentful/Articles";
+import Styles from "@styles/Typography.module.css";
 import { NextSeo } from "next-seo";
 
-export default function Success() {
+export default function Success({ featuredArticles }) {
   return (
     <>
       <MainLayout>
@@ -14,8 +17,20 @@ export default function Success() {
 
         <ContentWrapper>
           <SubmitFormSuccess />
+          <h2 className={Styles.sectionHeading}>Read featured articles</h2>
+          <ArticleList articles={featuredArticles} />
         </ContentWrapper>
       </MainLayout>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const featuredArticles = await ContentfulArticles.getFeatured();
+
+  return {
+    props: {
+      featuredArticles,
+    },
+  };
 }

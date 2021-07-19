@@ -1,0 +1,13 @@
+.sectionHeading {
+  font-family: var(--font-family-heading);
+  text-transform: uppercase;
+  text-align: left;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  display: block;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 1.2;
+  max-width: 30ch;
+  padding-bottom: 1rem;
+  border-bottom: 0.25rem solid var(--red);
+}
