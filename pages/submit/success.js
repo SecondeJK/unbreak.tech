@@ -3,8 +3,6 @@ import Head from "next/head";
 import SubmitFormSuccess from "@components/SubmitFormSuccess";
 import ContentWrapper from "@components/ContentWrapper";
 
-//TODO - add this to noindex
-
 export default function Success() {
   return (
     <>
@@ -15,6 +13,8 @@ export default function Success() {
             name="description"
             content="Thank you for your submission to UNBREAK.TECH — a platform for MEN to educate other MEN about the need for change and equality in tech."
           />
+
+          <meta name="robots" content="noindex" />
 
           <meta name="monetization" content="$ilp.uphold.com/J7y7wkRezRYL" />
 
