@@ -141,7 +141,7 @@ export default function SubmitForm() {
         </div>
         <button
           type="submit"
-          className={Styles.submitForm__button}
+          className={`${Styles.submitForm__button} ${Styles.submitForm__button__full}`}
           disabled={!canSubmit || !linkValid}>
           Submit
         </button>

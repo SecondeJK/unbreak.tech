@@ -4,6 +4,7 @@ import ContentWrapper from "@components/ContentWrapper";
 import ArticleList from "@components/ArticleList";
 import ContentfulArticles from "@lib/contentful/Articles";
 import LogoBanner from "@components/LogoBanner";
+import Styles from "@styles/Typography.module.css";
 import { NextSeo } from "next-seo";
 
 export default function Home({ articles }) {
@@ -19,6 +20,9 @@ export default function Home({ articles }) {
 
         <ContentWrapper>
           <Mission />
+          <h2 className={Styles.sectionHeading}>
+            Read {articles.length} articles by men on equality in the tech industry
+          </h2>
           <ArticleList articles={articles} />
         </ContentWrapper>
       </MainLayout>
