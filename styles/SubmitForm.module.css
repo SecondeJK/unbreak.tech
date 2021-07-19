@@ -29,6 +29,10 @@
   margin-bottom: 2rem;
 }
 
+.disclaimer:last-of-type {
+  margin-bottom: 4rem;
+}
+
 .submitForm {
   max-width: var(--form-max-width);
   margin: 3rem auto 6rem auto;
@@ -90,6 +94,7 @@
   cursor: pointer;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  text-decoration: none;
 }
 
 .submitForm__button[disabled] {

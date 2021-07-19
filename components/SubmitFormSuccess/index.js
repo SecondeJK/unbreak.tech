@@ -1,4 +1,5 @@
 import Styles from "@styles/SubmitForm.module.css";
+import Link from "next/link";
 
 export default function SubmitFormSuccess() {
   return (
@@ -11,6 +12,9 @@ export default function SubmitFormSuccess() {
           your article goes live on the site.
         </p>
         <p className={Styles.disclaimer}>Thank you!</p>
+        <Link href="/">
+          <a className={Styles.submitForm__button}>Return to home page</a>
+        </Link>
       </div>
     </>
   );
