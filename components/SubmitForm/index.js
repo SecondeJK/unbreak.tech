@@ -8,6 +8,7 @@ export default function SubmitForm() {
   const [twitterUser, setTwitterUser] = useState("");
   const [name, setName] = useState("");
   const [word, setWord] = useState("-1");
+  const [canSubmit, setCanSubmit] = useState(true);
 
   function validateLink(value) {
     const match = value.match(/^https:\/\//);
@@ -16,6 +17,9 @@ export default function SubmitForm() {
 
   function handleChange(type, value) {
     switch (type) {
+      case "bot":
+        setCanSubmit(false);
+        break;
       case "twitter":
         setTwitterUser(value);
         break;
@@ -66,7 +70,7 @@ export default function SubmitForm() {
             type="url"
             name="link"
             id="link"
-            placeholder="https:"
+            placeholder="https://"
             className={Styles.submitForm__input}
           />
           {!linkValid && linkTouched && (
@@ -129,11 +133,22 @@ export default function SubmitForm() {
         </div>
         <div className={Styles.submitForm__honeypot}>
           <label htmlFor="word">Do not fill this out if you are human</label>
-          <input name="bot-field" type="text" />
+          <input
+            name="bot-field"
+            type="text"
+            onChange={(e) => handleChange("bot", e.target.value)}
+          />
         </div>
-        <button type="submit" className={Styles.submitForm__button} disabled={!linkValid}>
+        <button
+          type="submit"
+          className={Styles.submitForm__button}
+          disabled={!canSubmit || !linkValid}>
           Submit
         </button>
+        {!canSubmit ||
+          (!linkValid && (
+            <p className={Styles.submitForm__error}>Please correct the form errors above.</p>
+          ))}
       </form>
     </>
   );

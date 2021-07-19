@@ -1,6 +1,12 @@
 .container {
-  margin: 6rem auto 3rem auto;
+  margin: 2rem auto 3rem auto;
   max-width: var(--form-max-width);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin-top: 8rem;
+  }
 }
 
 .header {
@@ -83,6 +89,11 @@
   letter-spacing: 1px;
   cursor: pointer;
   margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.submitForm__button[disabled] {
+  opacity: 0.8;
 }
 
 .submitForm__button:focus,
