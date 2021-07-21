@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Styles from "@styles/Header.module.css";
 import LogoU from "@components/LogoU";
+import Feed from "@components/Header/svg/Feed";
 
 export default function Header() {
   return (
@@ -16,13 +17,18 @@ export default function Header() {
                 <a className={Styles.nav__listItemLink}>Home</a>
               </Link>
             </li>
-            <li
-              className={`${Styles.nav__listItem} ${Styles.nav__listItemLink} ${Styles.nav__listItemLink__soon}`}>
+            <li className={`${Styles.nav__listItem} ${Styles.nav__listItemLink}`}>
               <Link href="/submit">
                 <a className={Styles.nav__listItemLink}>Submit your article</a>
               </Link>
             </li>
           </ul>
+
+          <Link href="/feed.xml">
+            <a className={`${Styles.nav__listItemLink} ${Styles.nav__rssIcon}`} aria-label="View RSS feed">
+              <Feed />
+            </a>
+          </Link>
         </nav>
       </div>
     </header>

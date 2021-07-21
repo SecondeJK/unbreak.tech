@@ -34,6 +34,12 @@ export default {
   ],
   additionalLinkTags: [
     {
+      rel: "alternate",
+      type: "application/rss+xml",
+      title: "RSS Feed for unbreak.tech",
+      href: "https://unbreak.tech/feed.xml",
+    },
+    {
       rel: "preconnect",
       href: "https://fonts.gstatic.com",
     },
