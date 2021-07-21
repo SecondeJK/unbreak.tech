@@ -1,12 +1,39 @@
 .footer {
+  align-items: center;
   background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-main);
+  font-size: 1rem;
+  justify-content: center;
+  text-transform: uppercase;
 }
 
-.footer__copyright {
+.footer a > div {
+  display: inline-flex;
+  align-self: center;
+}
+
+.footer a svg {
+  height: 1.5em;
+  width: 1.5em;
+  fill: currentColor;
+}
+
+.footer a svg {
+    top: .25em;
+    position: relative;
+}
+
+.footer a, .footer a:visited {
   color: var(--white);
-  font-family: var(--font-family-main);
-  text-align: center;
-  font-size: 1rem;
-  text-transform: uppercase;
-  padding: 2rem;
+}
+
+.footer {
+  padding: 1rem 0;
+}
+
+.footer > * {
+  padding: 1rem;
 }
