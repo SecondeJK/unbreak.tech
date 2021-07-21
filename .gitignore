@@ -39,3 +39,4 @@ yarn-error.log*
 # resources created at build time
 /public/sitemap.xml
 /public/robots.txt
+/public/feed.xml
