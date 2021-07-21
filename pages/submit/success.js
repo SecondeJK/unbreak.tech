@@ -26,7 +26,7 @@ export default function Success({ featuredArticles }) {
 }
 
 export async function getStaticProps() {
-  const featuredArticles = await ContentfulArticles.getFeatured();
+  const featuredArticles = await ContentfulArticles.getAll({ featured: true });
 
   return {
     props: {
