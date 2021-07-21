@@ -2,8 +2,8 @@ import css from "styled-jsx/css";
 
 export default css.global`
   :root {
-    // --black: #0f111a;
-    --black: #000000;
+    --black: #0f111a;
+    // --black: #000000;
     --white: #ffffff;
     --gray: #c9cacc;
     --gray-dark: #595959;
@@ -19,7 +19,7 @@ export default css.global`
     --readable-text-width: 48rem;
     --form-max-width: 48rem;
 
-    --box-shadow-default: rgba(0, 0, 0, 0.1) 0 0.125rem 0.25rem;
+    --box-shadow-default: rgba(0, 0, 0, 0.2) 0 0.25rem 0.25rem;
   }
 
   html {
