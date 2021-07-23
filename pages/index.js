@@ -20,6 +20,7 @@ export default function Home({ articles }) {
 
         <ContentWrapper>
           <Mission />
+
           <h2 className={Styles.sectionHeading}>
             Read {articles.length} articles by men on equality in the tech industry
           </h2>

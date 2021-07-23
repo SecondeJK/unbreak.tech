@@ -1,14 +1,18 @@
+.mission {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: clamp(4rem, 6vw, 6rem);
+  margin-top: clamp(4rem, 6vw, 6rem);
+}
+
 .mission__text {
   font-family: var(--font-family-main);
   font-size: clamp(1.4rem, 2vw, 2rem);
   line-height: 1.6;
   font-weight: var(--font-weight-normal);
   color: var(--black);
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: clamp(4rem, 6vw, 6rem);
-  margin-top: clamp(4rem, 6vw, 6rem);
   text-align: left;
+  margin-bottom: 2rem;
 }
 
 .mission__text__bold {
@@ -26,4 +30,43 @@
   outline-width: 0;
   box-shadow: var(--red) 0 0 0 0.25rem;
   transition: box-shadow 0.2s ease 0s;
+}
+
+.mission__button {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 0.25rem solid var(--black);
+  width: 100%;
+  font-family: var(--font-family-main);
+  text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission__button:focus,
+.mission__button:hover {
+  outline-width: 0;
+  box-shadow: var(--red) 0 0 0 0.25rem;
+  transition: box-shadow var(--transition-time) ease 0s;
+}
+
+.mission__buttonIcon {
+  margin-right: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .mission__button {
+    width: unset;
+    display: inline-flex;
+  }
 }
