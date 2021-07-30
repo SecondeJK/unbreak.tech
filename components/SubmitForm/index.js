@@ -3,12 +3,11 @@ import { useState } from "react";
 
 export default function SubmitForm() {
   const [link, setLink] = useState("");
-  const [linkValid, setLinkValid] = useState(true);
+  const [linkValid, setLinkValid] = useState(false);
   const [linkTouched, setLinkTouched] = useState(false);
   const [twitterUser, setTwitterUser] = useState("");
   const [name, setName] = useState("");
   const [word, setWord] = useState("-1");
-  const [canSubmit, setCanSubmit] = useState(true);
 
   function validateLink(value) {
     const match = value.match(/^https:\/\//);
@@ -53,6 +52,7 @@ export default function SubmitForm() {
         </p>
         <p className={Styles.disclaimer}>Thank you!</p>
       </div>
+
       <form
         name="Submit unbreak.tech article"
         method="POST"
@@ -62,7 +62,7 @@ export default function SubmitForm() {
         <input type="hidden" name="form-name" value="Submit unbreak.tech article" />
         <div className={Styles.submitForm__row}>
           <label htmlFor="link" required className={Styles.submitForm__label}>
-            Link to article<span className={Styles.submitForm__label__required}>*</span>
+            Link to article<span className={Styles.submitForm__label__required}>* required</span>
           </label>
           <input
             onChange={(e) => handleChange("link", e.target.value)}
@@ -142,13 +142,12 @@ export default function SubmitForm() {
         <button
           type="submit"
           className={`${Styles.submitForm__button} ${Styles.submitForm__button__full}`}
-          disabled={!canSubmit || !linkValid}>
+          disabled={!linkValid}>
           Submit
         </button>
-        {!canSubmit ||
-          (!linkValid && (
-            <p className={Styles.submitForm__error}>Please correct the form errors above.</p>
-          ))}
+        {!linkValid && linkTouched && (
+          <p className={Styles.submitForm__error}>Please correct the form errors above.</p>
+        )}
       </form>
     </>
   );
