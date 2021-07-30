@@ -18,7 +18,7 @@
 
 .articleList__cardImageContainer {
   overflow: hidden;
-  height: 20rem;
+  height: 15rem;
   display: grid;
   align-items: center;
   background-color: var(--white);
@@ -102,6 +102,10 @@
 
   .articleList__card {
     margin-bottom: 0;
+  }
+
+  .articleList__cardImageContainer {
+    height: 22rem;
   }
 }
 
