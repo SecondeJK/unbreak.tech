@@ -1,4 +1,5 @@
 import Styles from "@styles/LogoBanner.module.css";
+// NOT IN USE
 
 export default function LogoBanner() {
   return (
