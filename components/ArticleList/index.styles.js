@@ -30,7 +30,6 @@ const Title = styled.h2`
   display: table;
   font-family: var(--font-family-heading);
   font-weight: var(--font-weight-bold);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 `;
 
 const TitleInner = styled.span`
@@ -40,6 +39,7 @@ const TitleInner = styled.span`
   padding: 0.6rem;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 `;
 
 const Card = styled.a`
