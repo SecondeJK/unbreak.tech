@@ -1,3 +1,5 @@
+// NOT IN USE
+
 import Styles from "@styles/Mission.module.css";
 import Twitter from "@components/Mission/svg/Twitter";
 

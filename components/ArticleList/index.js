@@ -5,6 +5,7 @@ export default function ArticleList({ articles }) {
     <Articles>
       {articles.map((article) => (
         <Card
+          cta={article.cta ?? false}
           imageUrl={article.image?.url ?? null}
           ariaLabel={`${article.title} by ${article.author}`}
           href={article.url}

@@ -25,7 +25,14 @@ const TitleInner = styled.span`
 `;
 
 const Card = styled.a`
-  background-color: var(--red);
+  ${(props) =>
+    props.cta
+      ? css`
+          background-color: var(--black);
+        `
+      : css`
+          background-color: var(--red);
+        `};
   text-decoration: none;
   display: flex;
   flex-direction: column;

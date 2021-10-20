@@ -5,6 +5,7 @@
 .footer__copyright {
   color: var(--white);
   font-family: var(--font-family-main);
+  font-weight: var(--font-weight-bold);
   text-align: center;
   font-size: 1rem;
   text-transform: uppercase;
