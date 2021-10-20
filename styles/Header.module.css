@@ -93,7 +93,7 @@
 
 .header__navListItemLink:focus {
   outline: none;
-  box-shadow: var(--color-primary) 0 0 0 0.25rem;
+  box-shadow: var(--red) 0 0 0 0.25rem;
   transition: box-shadow 0.2s ease 0s;
 }
 

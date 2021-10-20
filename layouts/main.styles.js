@@ -2,7 +2,7 @@ import css from "styled-jsx/css";
 
 export default css.global`
   :root {
-    --black: #0f111a;
+    --black: #000000;
     --white: #ffffff;
     --gray: #c9cacc;
     --gray-dark: #595959;
