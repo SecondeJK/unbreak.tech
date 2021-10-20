@@ -1,4 +1,4 @@
-import { Articles, Card, Title, TitleInner, Author } from "./index.styles";
+import { Articles, Card, Title, TitleInner, Author, Excerpt } from "./index.styles";
 
 export default function ArticleList({ articles }) {
   return (
@@ -15,7 +15,7 @@ export default function ArticleList({ articles }) {
           <Title>
             <TitleInner>{article.title}</TitleInner>
           </Title>
-          {/* <p className={Styles.article__excerpt}>{article.excerpt}</p> */}
+          <Excerpt>{article.excerpt}</Excerpt>
 
           <Author>{article.author}</Author>
         </Card>

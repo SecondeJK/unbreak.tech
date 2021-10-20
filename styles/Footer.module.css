@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--black);
+  background-color: var(--red);
 }
 
 .footer__copyright {
@@ -7,7 +7,7 @@
   font-family: var(--font-family-main);
   font-weight: var(--font-weight-bold);
   text-align: center;
-  font-size: 1rem;
+  font-size: 2rem;
   text-transform: uppercase;
   padding: 2rem;
 }

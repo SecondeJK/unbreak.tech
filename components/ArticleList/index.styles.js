@@ -1,8 +1,25 @@
 import styled, { css } from "styled-components";
 
 const Articles = styled.section`
+  background-color: var(--black);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+`;
+
+const Excerpt = styled.p`
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-style: italic;
+  display: none;
+  text-align: center;
+  width: 100%;
+  font-family: var(--font-family-heading);
+  background-color: var(--black);
+  margin-top: 2rem;
+  font-weight: var(--font-weight-normal);
+  color: var(--white);
+  padding: 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 `;
 
 const Title = styled.h2`
@@ -13,6 +30,7 @@ const Title = styled.h2`
   display: table;
   font-family: var(--font-family-heading);
   font-weight: var(--font-weight-bold);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 `;
 
 const TitleInner = styled.span`
@@ -60,6 +78,10 @@ const Card = styled.a`
     background-blend-mode: unset;
   }
 
+  &:focus ${Excerpt}, &:hover ${Excerpt} {
+    display: block;
+  }
+
   &:hover ${TitleInner}, &:focus ${TitleInner} {
     background-color: var(--white);
     color: var(--black);
@@ -82,4 +104,4 @@ const Author = styled.p`
   position: absolute;
 `;
 
-export { Articles, Card, Title, TitleInner, Author };
+export { Articles, Card, Title, TitleInner, Author, Excerpt };
