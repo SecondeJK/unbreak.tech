@@ -16,16 +16,14 @@ export default function Home({ articles }) {
           description="UNBREAK.TECH — a platform for MEN to educate other MEN about the need for change and equality in tech."
         />
 
-        <LogoBanner />
+        {/* <LogoBanner /> */}
 
-        <ContentWrapper>
-          <Mission />
+        {/* <Mission /> */}
 
-          <h2 className={Styles.sectionHeading}>
+        {/* <h2 className={Styles.sectionHeading}>
             Read {articles.length} articles by men on equality in the tech industry
-          </h2>
-          <ArticleList articles={articles} />
-        </ContentWrapper>
+          </h2> */}
+        <ArticleList articles={articles} />
       </MainLayout>
     </>
   );
