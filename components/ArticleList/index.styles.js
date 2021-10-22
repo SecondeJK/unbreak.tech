@@ -20,6 +20,7 @@ const Excerpt = styled.p`
   color: var(--white);
   padding: 0.5rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  z-index: 10;
 `;
 
 const Title = styled.h2`
@@ -30,6 +31,9 @@ const Title = styled.h2`
   display: table;
   font-family: var(--font-family-heading);
   font-weight: var(--font-weight-bold);
+  z-index: 10;
+  max-width: 90%;
+  margin-top: 2rem;
 `;
 
 const TitleInner = styled.span`
@@ -44,7 +48,7 @@ const TitleInner = styled.span`
 
 const Card = styled.a`
   ${(props) =>
-    props.cta
+    props.isCta
       ? css`
           background-color: var(--black);
         `
@@ -56,17 +60,21 @@ const Card = styled.a`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
   aspect-ratio: 9/16;
   position: relative;
+  z-index: 11;
+  padding: 0;
   border: 0.125rem solid var(--red);
+  overflow: hidden;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
   background-image: linear-gradient(to bottom, rgba(15, 17, 26, 0.25), rgba(15, 17, 26, 1));
+
   ${(props) =>
     props.imageUrl !== null &&
+    !props.hasVideo &&
     css`
       background-image: linear-gradient(to bottom, rgba(15, 17, 26, 0.25), rgba(15, 17, 26, 1)),
         url(${props.imageUrl});
@@ -81,6 +89,14 @@ const Card = styled.a`
   &:focus ${Excerpt}, &:hover ${Excerpt} {
     display: block;
   }
+  ${(props) =>
+    props.hasVideo
+      ? css`
+          &:hover {
+            justify-content: flex-start;
+          }
+        `
+      : ""}
 
   &:hover ${TitleInner}, &:focus ${TitleInner} {
     background-color: var(--white);
@@ -102,6 +118,29 @@ const Author = styled.p`
   padding: 0.5rem;
   bottom: 0;
   position: absolute;
+  z-index: 10;
 `;
 
-export { Articles, Card, Title, TitleInner, Author, Excerpt };
+const PlayIconContainer = styled.span`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: var(--white);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-image: linear-gradient(to bottom, rgba(15, 17, 26, 0.25), rgba(15, 17, 26, 1));
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  svg {
+    opacity: 0.5;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 6rem;
+  }
+`;
+
+export { Articles, Card, Title, TitleInner, Author, Excerpt, PlayIconContainer };
