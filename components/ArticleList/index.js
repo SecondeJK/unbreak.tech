@@ -30,6 +30,16 @@ export default function ArticleList({ articles }) {
               loop={true}
               volume={0.2}
               muted={false}
+              controls
+              videoCaptions={[
+                {
+                  src: article.vttFile.url,
+                  srcLang: "en",
+                  label: "English",
+                  kind: "captions",
+                  default: true,
+                },
+              ]}
               pausedOverlay={
                 <PlayIconContainer>
                   <PlayIcon />
