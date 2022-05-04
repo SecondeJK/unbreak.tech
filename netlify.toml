@@ -1,0 +1,6 @@
+[dev]
+  publish = "_site"
+  command = "npm run dev"
+[build]
+  command = "eleventy"
+  publish = "_site"

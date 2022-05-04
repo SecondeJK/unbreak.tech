@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: var(--scroll-behaviour);
+}
+
+body {
+  font-size: 1rem;
+  padding: 1rem;
+  font-family: var(--font-family-serif);
+  font-weight: var(--font-weight-normal);
+  background-color: var(--color-page-bg);
+}
+
+a {
+  color: inherit;
+  transition: color 0.2s ease-in-out;
+  text-decoration: underline;
+  text-underline-offset: 0.125rem;
+  text-decoration-thickness: 0.125rem;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a:focus {
+  @include focus;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6,
+h6 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

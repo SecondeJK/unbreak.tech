@@ -1,0 +1,16 @@
+:root {
+  --font-family-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue",
+    Arial, sans-serif;
+  --articles-max-width: 600px;
+
+  --black: #000000;
+  --white: #ffffff;
+  --button-fg: var(--white);
+  --button-bg: var(--black);
+}
+
+@media (prefers-color-scheme: light) {
+}
+
+@media (prefers-reduced-motion: reduce) {
+}
