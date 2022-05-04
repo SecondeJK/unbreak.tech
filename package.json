@@ -1,21 +1,26 @@
 {
   "name": "unbreak.tech",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whitep4nth3r/unbreak.tech.git"
+  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "postbuild": "next-sitemap",
-    "start": "next start"
+    "watch:sass": "sass --watch ./src/_sass:src/_css",
+    "build:sass": "sass ./src/_sass:src/_css",
+    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "build:eleventy": "npx @11ty/eleventy",
+    "dev": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:*",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy --serve",
+    "debughard": "DEBUG=Dev:Eleventy* npx @11ty/eleventy --serve"
   },
-  "dependencies": {
-    "next": "^12.0.3",
-    "next-seo": "^4.26.0",
-    "next-sitemap": "^1.6.140",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-hover-video-player": "^9.3.1",
-    "styled-components": "^5.3.3"
+ "dependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy-img": "^1.1.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.49.8"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "author": "Salma Alam-Naylor"
 }

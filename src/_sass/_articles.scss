@@ -1,0 +1,55 @@
+.articles {
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.articles__item {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.articles__itemLink {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--button-bg);
+  color: var(--button-fg);
+  padding: 1rem 1.5rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.articles__itemMeta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.articles__itemAvatar {
+  border-radius: 50%;
+  height: 3rem;
+}
+
+.articles__itemTitle {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: var(--color-fg);
+}
+
+.articles__itemExcerpt {
+  font-size: 1.8rem;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+  color: var(--color-fg);
+}
+
+.articles__itemAuthor {
+  font-weight: bold;
+  color: var(--color-fg);
+}

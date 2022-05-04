@@ -1,0 +1,14 @@
+.header {
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+.header__title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--color-fg);
+}
