@@ -1,9 +1,13 @@
 .footer {
+  padding-top: 4rem;
   margin: 2rem auto 2rem auto;
+  display: block;
   max-width: var(--content-max-width);
+  text-align: center;
 }
 
 .footer__copyright {
   font-size: 1rem;
   color: var(--color-fg);
+  margin-bottom: 1rem;
 }
