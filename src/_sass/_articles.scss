@@ -1,7 +1,3 @@
-// * {
-//   outline: 1px solid red;
-// }
-
 .articles {
   max-width: var(--content-max-width);
   margin-left: auto;
@@ -42,14 +38,17 @@
   font-size: 2rem;
   margin-bottom: 1.5rem;
   line-height: 1.2;
+  color: var(--color-fg);
 }
 
 .articles__itemExcerpt {
   font-size: 1.8rem;
   line-height: 1.3;
   margin-bottom: 2rem;
+  color: var(--color-fg);
 }
 
 .articles__itemAuthor {
   font-weight: bold;
+  color: var(--color-fg);
 }
