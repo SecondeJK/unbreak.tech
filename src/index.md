@@ -1,14 +1,12 @@
 ---
 layout: base.html
 title: unbreak.tech
-metaDescription: TO DO
+metaDescription: Unbreak.tech is a platform for MEN to educate other MEN about the need for change and equality in tech.
 templateEngineOverride: njk
-eleventyComputed:
-  articleCount: "{{ articles | length }}"
 ---
 
 <ul class="articles">
-{% for key, article in articles %}
+  {% for key, article in articles %}
     <li class="articles__item">
       <div class="articles__itemMeta">
         {% if article.githubUsername %}
@@ -22,7 +20,5 @@ eleventyComputed:
         Read article
       </a>
     </li>
-
-{% endfor %}
-
+  {% endfor %}
 </ul>
