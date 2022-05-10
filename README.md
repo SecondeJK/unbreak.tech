@@ -1,6 +1,6 @@
 # Unbreak.tech
 
-Unbreak.tech is a platform for MEN to educate other MEN about the need for change and equality in tech.
+[Unbreak.tech](https://unbreak.tech) is a platform for MEN to educate other MEN about the need for change and equality in tech.
 
 More media formats will be supported soon including TikToks, YouTube shorts and more.
 
